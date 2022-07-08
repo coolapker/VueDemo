@@ -1,6 +1,9 @@
 let axios = require('axios');
-axios.get("http://localhost:8080/movies/1").then((result) => {
-    
-}).catch((err) => {
-    console.log(err.);
-});
+url = "http://localhost:8080/movies/"
+axios.get(url, 1)
+.then(res => {
+    console.log(typeof res)
+})
+.catch(err => {
+    console.error(err.status); 
+})
