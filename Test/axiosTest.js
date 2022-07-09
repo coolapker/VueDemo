@@ -1,9 +1,12 @@
 let axios = require('axios');
-url = "http://localhost:8080/movies/"
+// import axios from "axios";
+
+let url;
+url = "http://localhost:8080/movies/1"
 axios.get(url)
 .then(res => {
-    console.log(typeof res)
+    console.log(res.data)
 })
 .catch(err => {
-    console.error(err.status); 
+    console.error(err); 
 })
